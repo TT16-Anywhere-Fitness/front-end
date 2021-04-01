@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./Routes/Home/Home";
 import { PrivateRoute } from "./utils/PrivateRoute";
 import Client from "./Routes/client/Client";
+import Login from "./components/Login";
 
 function App() {
 	return (
@@ -13,7 +14,10 @@ function App() {
 				<PrivateRoute exact path="/client">
 					<Client />
 				</PrivateRoute>
-				<Route path="/" component={Home} />
+				<Route path="/login">
+					<Login />
+				</Route>
+				<Route exact path="/" component={Home} />
 			</Switch>
 			<Footer />
 		</>

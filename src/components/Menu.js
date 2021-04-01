@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Menu = () => {
+	const [logout, setLogout] = useState(false);
 	const handleLogout = (e) => {
 		window.localStorage.clear("token");
+		setLogout(true);
 	};
+
 	return (
 		<div className="inner">
 			<ul className="links">
@@ -31,11 +34,13 @@ const Menu = () => {
 						Log In
 					</a>
 				</li>
-				<li>
-					<a href="/" onClick={handleLogout} className="button fit">
-						Log Out
-					</a>
-				</li>
+				{logout ? (
+					<li>
+						<a href="/" onClick={handleLogout} className="button fit">
+							Log Out
+						</a>
+					</li>
+				) : null}
 			</ul>
 			<a className="close" href="#menu">
 				"Close"

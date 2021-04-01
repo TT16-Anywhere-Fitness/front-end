@@ -1,0 +1,30 @@
+.form-group {
+	margin: auto auto;
+	color: red;
+	width: 30vw;
+	align-self: center;
+}
+.username {
+	color: snow;
+	margin: auto auto;
+}
+.password {
+	color: snow;
+	margin: auto auto;
+}
+.loginBTN {
+	margin: 1rem auto;
+	align-self: center;
+	color: snow;
+}
+.loginBTN:hover {
+	margin: 0 auto;
+	align-self: center;
+	border: 2px royalblue solid;
+	background-color: snow;
+	color: royalblue;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
