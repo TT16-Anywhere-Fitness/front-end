@@ -34,6 +34,7 @@ const Menu = () => {
 						Log In
 					</a>
 				</li>
+				{/* done with this */}
 				{logout ? (
 					<li>
 						<a href="/" onClick={handleLogout} className="button fit">
